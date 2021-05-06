@@ -34,6 +34,8 @@ services:
     image: machines/filestash
     restart: always
     environment:
-    - APPLICATION_URL=cloud.morris-frank.dev
+      - APPLICATION_URL=cloud.morris-frank.dev
+    volumns:
+      - ~/appdata/filestash:/app/data/state/config
     ports:
-    - "8334:8334"
+      - "8334:8334"
