@@ -11,7 +11,7 @@ services:
       - PGID=1000
       - TZ=Europe/Berlin
       - URL=morris-frank.dev
-      - SUBDOMAINS=bitwarden,netflix,cloud,
+      - SUBDOMAINS=vault,watch,cloud,
       - VALIDATION=dns
       - DNSPLUGIN=cloudflare
       - ONLY_SUBDOMAINS=true

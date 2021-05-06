@@ -12,3 +12,6 @@ apt install docker-compose
 
 echo "Please setup Backblaze rclone now: (name B2)"
 rclone config
+
+./restore.sh
+cp proxy.conf ~/appdata/swag/nginx/proxy-confs/
