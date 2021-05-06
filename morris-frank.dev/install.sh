@@ -15,3 +15,4 @@ rclone config
 
 ./restore.sh
 cp proxy.conf ~/appdata/swag/nginx/site-confs/default
+docker exec -it swag htpasswd -c /config/nginx/.htpasswd morris
