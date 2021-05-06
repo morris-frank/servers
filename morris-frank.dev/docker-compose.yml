@@ -29,3 +29,11 @@ services:
       - SIGNUPS_ALLOWED=false
     volumes:
       - ~/appdata/vaultwarden:/data
+  filestash:
+    container_name: filestash
+    image: machines/filestash
+    restart: always
+    environment:
+    - APPLICATION_URL=cloud.morris-frank.dev
+    ports:
+    - "8334:8334"
