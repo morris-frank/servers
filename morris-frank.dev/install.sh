@@ -10,7 +10,5 @@ apt update
 apt install docker-ce docker-ce-cli containerd.io
 apt install docker-compose
 
-
-
 echo "Please setup Backblaze rclone now: (name B2)"
 rclone config

@@ -16,7 +16,7 @@ services:
       - DNSPLUGIN=cloudflare
       - ONLY_SUBDOMAINS=true
     volumes:
-      - </path/to/appdata/config>:/config
+      - ~/appdata/swag:/config
     ports:
       - 443:443
     restart: unless-stopped
@@ -27,4 +27,4 @@ services:
     environment:
       - WEBSOCKET_ENABLED=true  # Enable WebSocket notifications.
     volumes:
-      - ./vw-data:/data
+      - ~/appdata/vaultwarden:/data
