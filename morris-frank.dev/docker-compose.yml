@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  swag:
+    image: ghcr.io/linuxserver/swag
+    container_name: swag
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Berlin
+      - URL=morris-frank.dev
+      - SUBDOMAINS=bitwarden,netflix,cloud,
+      - VALIDATION=dns
+      - DNSPLUGIN=cloudflare
+      - ONLY_SUBDOMAINS=true
+    volumes:
+      - </path/to/appdata/config>:/config
+    ports:
+      - 443:443
+    restart: unless-stopped
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden
+    restart: always
+    environment:
+      - WEBSOCKET_ENABLED=true  # Enable WebSocket notifications.
+    volumes:
+      - ./vw-data:/data
