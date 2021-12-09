@@ -11,7 +11,7 @@ services:
       - PGID=1000
       - TZ=Europe/Berlin
       - URL=morris-frank.dev
-      - SUBDOMAINS=vault,watch,cloud,apes,
+      - SUBDOMAINS=wildcard
       - VALIDATION=dns
       - DNSPLUGIN=cloudflare
       - ONLY_SUBDOMAINS=true
