@@ -11,7 +11,7 @@ services:
       - PGID=1000
       - TZ=Europe/Berlin
       - URL=morris-frank.dev
-      - SUBDOMAINS=vault,watch,cloud,
+      - SUBDOMAINS=vault,watch,cloud,apes,
       - VALIDATION=dns
       - DNSPLUGIN=cloudflare
       - ONLY_SUBDOMAINS=true
@@ -29,11 +29,3 @@ services:
       - SIGNUPS_ALLOWED=false
     volumes:
       - ~/appdata/vaultwarden:/data
-  filestash:
-    container_name: filestash
-    image: machines/filestash
-    restart: always
-    environment:
-      - APPLICATION_URL=cloud.morris-frank.dev
-    ports:
-      - "8334:8334"
