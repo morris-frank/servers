@@ -20,7 +20,6 @@ services:
     ports:
       - 443:443
     restart: unless-stopped
-    network_mode: "host"
   vaultwarden:
     image: vaultwarden/server:latest
     container_name: vaultwarden
