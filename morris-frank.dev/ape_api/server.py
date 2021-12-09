@@ -8,4 +8,4 @@ async def resp(request):
 	return text(f"filename: test.png")
 
 if __name__ == "__main__":
-	app.run(host="0.0.0.0", port=8765)
+	app.run()
