@@ -1,11 +1,11 @@
 from sanic import Sanic
-from sanic.response import json
+from sanic.response import json, text
 
 app = Sanic(__name__)
 
-@app.route("/")
+@app.get("/")
 async def resp(request):
-	return json({"filename": "test.png"})
+	return text(f"filename: test.png")
 
 if __name__ == "__main__":
 	app.run(host="0.0.0.0", port=8765)
