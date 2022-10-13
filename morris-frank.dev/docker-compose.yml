@@ -1,5 +1,4 @@
-version: '3'
-
+version: "3"
 
 services:
   swag:
@@ -22,6 +21,10 @@ services:
     restart: unless-stopped
     extra_hosts:
       - host.docker.internal:127.0.0.1
+  soilytix:
+    image: joseluisq/static-web-server:2
+    volumes:
+      - /root/soilytix:/public
   vaultwarden:
     image: vaultwarden/server:latest
     container_name: vaultwarden
